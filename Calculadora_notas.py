@@ -1,3 +1,4 @@
+from time import sleep
 lista = list()
 exam = []
 while True:
@@ -47,4 +48,9 @@ if len(exam) > 0:
         print(f'{i:<4}{alu[0]:<10}{alu[1]:>8.2f}{alu[2]:>30.2f}')
     print('_' * 70)
     print()
+while True:
+    resp = str(input('Digite [N] para parar a visualização da tabela: ')).upper().strip()[0]
+    if resp in 'N':
+        break
 print('Fechando Programa..........')
+sleep(4)
