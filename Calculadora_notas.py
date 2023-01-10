@@ -2,19 +2,19 @@ from time import sleep
 lista = list()
 exam = list()
 while True:
-    nome = str(input('  Matéria(Se o nome da mesma for grande, abrevie): '))
-    while True:
-        nota_prova = float(input(' Nota da prova: '))
-        if nota_prova <= 10:
-            break
-        print('  404... Apenas de 0 a 10!')
-    while True:
         pim = float(input('  Nota PIM: '))
         if pim <= 10:
             break
         print('  404... Apenas de 0 a 10!')
+while True:
+    nome = str(input('   Matéria(Se o nome da mesma for grande, abrevie): '))
     while True:
-        ava = float(input('   Nota AVA: '))
+        nota_prova = float(input('    Nota da prova: '))
+        if nota_prova <= 10:
+            break
+        print('  404... Apenas de 0 a 10!')
+    while True:
+        ava = float(input('      Nota AVA: '))
         if ava <= 10:
             break
         print('  404... Apenas de 0 a 10!')
@@ -22,10 +22,10 @@ while True:
     if média < 5.7:
         aprov = (5 * 2) - média
         exam.append([nome, média, aprov])
-    if média > 5.7:
+    if média >= 5.7:
         lista.append([nome, [nota_prova, pim, ava], média])
     while True:
-        resp = str(input('    Deseja continuar?  [S/N] ')).upper().strip()[0]
+        resp = str(input('      Deseja continuar?  [S/N] ')).upper().strip()[0]
         if resp in 'SN':
             break
         print('  404... Apenas S ou N')
