@@ -1,6 +1,9 @@
 from time import sleep
 lista = list()
 exam = list()
+print('#' * 70)
+print(f'{"DIAGNÓSTICO DE NOTAS ACADÊMICAS":^70}')
+print('¬' * 70)
 while True:
         pim = float(input('  Nota PIM: '))
         if pim <= 10:
